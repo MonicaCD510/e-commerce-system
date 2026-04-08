@@ -9,11 +9,23 @@ async function run() {
   // console.log(products[0].price);
 
   
-  products.forEach((product: any) => {
+//   products.forEach((product: any) => {
+//   if (product.price > 500) {
+//     console.log(`Product: ${product.title} - Price: $${product.price}`);
+//   }
+// });
+
+let count = 0;
+
+products.forEach((product: any) => {
   if (product.price > 500) {
     console.log(`Product: ${product.title} - Price: $${product.price}`);
+    count++;
   }
 });
+
+console.log("Total products over $500:", count);
+
 }
 
 run();
