@@ -15,16 +15,26 @@ async function run() {
 //   }
 // });
 
-let count = 0;
+// let count = 0;
 
-products.forEach((product: any) => {
-  if (product.price > 500) {
-    console.log(`Product: ${product.title} - Price: $${product.price}`);
-    count++;
-  }
+// products.forEach((product: any) => {
+//   if (product.price > 500) {
+//     console.log(`Product: ${product.title} - Price: $${product.price}`);
+//     count++;
+//   }
+// });
+
+// console.log("Total products over $500:", count);
+
+const expensiveProducts = products.filter((product: any) => {
+  return product.price > 500;
 });
 
-console.log("Total products over $500:", count);
+expensiveProducts.forEach((product: any) => {
+  console.log(`Product: ${product.title} - Price: $${product.price}`);
+});
+
+console.log("Total:", expensiveProducts.length);
 
 }
 
