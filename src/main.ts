@@ -7,8 +7,8 @@ async function run() {
 // console.log(products[0].title);
 // console.log(products[0].price);
 
-products.forEach ((product: { title: any; }) => {
-  console.log(product.title);
+products.forEach((product: { title: any; price: any }) => {
+  console.log(product.title, product.price);
 });
 
 }run();
