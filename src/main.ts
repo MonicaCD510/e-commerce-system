@@ -10,8 +10,10 @@ async function run() {
 
   
   products.forEach((product: any) => {
+  if (product.price > 500) {
     console.log(`Product: ${product.title} - Price: $${product.price}`);
-  });
+  }
+});
 }
 
 run();
