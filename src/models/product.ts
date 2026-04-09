@@ -10,4 +10,8 @@ export class Product {
   displayDetails() {
     console.log(`Product: ${this.title} - Price: $${this.price}`);
   }
-}
+
+  getPriceWithDiscount(discount: number): number {
+  const discountAmount = this.price * (discount / 100);
+  return this.price - discountAmount;
+}}
