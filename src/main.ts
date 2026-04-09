@@ -1,4 +1,5 @@
 import { getProducts } from "./services/apiService";
+import { Product } from "./models/product";
 
 async function run() {
   const products = await getProducts();
